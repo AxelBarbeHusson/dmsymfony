@@ -29,4 +29,20 @@ class VuesController extends AbstractController
         return new Response('Check out this great product: ' . $product->getMovie());
 
     }
+    public function createFiche(): Response
+    {
+        $idMovie = new Movie();
+        $idMovie->getId();
+        $actor = new Acteurs();
+        $actor->getActors();
+        $categorie = new Categorie();
+        $categorie->getCategorie();
+
+        return $this->render('vues/index.html.twig', [
+            'controller_name' => 'VueController',
+            'actor' => $actor,
+            'categorie' => $categorie,
+            'idMovie' => $idMovie,
+        ]);
+    }
 }

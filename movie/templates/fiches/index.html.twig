@@ -3,7 +3,7 @@
 {% block title %}Hello FichesController!{% endblock %}
 
 {% block body %}
-{% for movie in movies %}
-    <li>{{ movies.name }}</li>
+{% for movies in movie %}
+    <li>{{ movie.name }}<ah href="127.0.0.1:8000/movie/{{ id }}">vue here</ah></li>
 {% endfor %}
 {% endblock %}

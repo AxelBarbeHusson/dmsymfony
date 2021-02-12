@@ -1,7 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello VuesController!{% endblock %}
+{% block title %}Voici la fiche de {% endblock %}
 
 {% block body %}
-
+{% for categories in id.categorie == {{ idMovie }} %}
+    <li>LA catégorie du fiml est {{ categorie.name }}</li>
+    {% endfor %}
+    {% for acteur in id.acteurs == {{ idMovie }} %}
+        <li>L'acteur du film ce nomme: {{ acteurs.name }}</li>
+    {% endfor %}
 {% endblock %}
