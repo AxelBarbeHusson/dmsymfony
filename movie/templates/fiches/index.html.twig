@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello FichesController!{% endblock %}
+
+{% block body %}
+{% for movie in movies %}
+    <li>{{ movies.name }}</li>
+{% endfor %}
+{% endblock %}
